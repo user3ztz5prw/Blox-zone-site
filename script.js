@@ -1,5 +1,5 @@
 const products=[
- {id:1,name:"Conta Exemplo #01",price:39.90,desc:"Anúncio demonstrativo — substitua pelos dados reais.",icon:"⚔️"},
+ {id:1,name:"Conta #01",price:20.99,desc:"V4 FULL,GOD HUMAN,SOULGUITAR,LV 2800+",icon:"⚔️"},
  {id:2,name:"Conta Exemplo #02",price:79.90,desc:"Anúncio demonstrativo — substitua pelos dados reais.",icon:"🔥"},
  {id:3,name:"Conta Exemplo #03",price:149.90,desc:"Anúncio demonstrativo — substitua pelos dados reais.",icon:"👑"},
  {id:4,name:"Conta Exemplo #04",price:59.90,desc:"Anúncio demonstrativo — substitua pelos dados reais.",icon:"🍎"},
