@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blox Zone — catálogo e suporte para a comunidade de Blox Fruits.">
+  <title>Blox Zone | Sua zona de Blox Fruits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#inicio"><span class="brand-mark">BZ</span><span>BLOX <b>ZONE</b></span></a>
+    <button class="menu-btn" aria-label="Abrir menu">☰</button>
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-comprar">Como comprar</a>
+      <a href="#termos">Termos</a>
+      <a href="#suporte">Suporte</a>
+    </nav>
+    <button class="cart-btn" id="openCart">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">⚡ BEM-VINDO À BLOX ZONE</p>
+        <h1>SUA ZONA DE<br><span>BLOX FRUITS</span></h1>
+        <p class="hero-text">Explore o catálogo da comunidade, confira as informações de cada anúncio e fale com o suporte.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#catalogo">Ver catálogo</a>
+          <a class="btn secondary" href="#suporte">Falar com suporte</a>
+        </div>
+      </div>
+      <div class="hero-orb"><div class="orb-inner">BZ</div></div>
+    </section>
+
+    <section class="stats">
+      <div><strong>⚡</strong><span>Atendimento<br>rápido</span></div>
+      <div><strong>🔒</strong><span>Informações<br>claras</span></div>
+      <div><strong>💜</strong><span>Comunidade<br>Blox Fruits</span></div>
+    </section>
+
+    <section id="catalogo" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">CATÁLOGO</p><h2>Anúncios em destaque</h2></div>
+        <div class="filters">
+          <input id="search" type="search" placeholder="🔎 Buscar anúncio...">
+          <select id="filter"><option value="all">Todos</option><option value="low">Até R$ 50</option><option value="mid">R$ 51–100</option><option value="high">Acima de R$ 100</option></select>
+        </div>
+      </div>
+      <div id="products" class="grid"></div>
+      <p id="empty" class="empty hidden">Nenhum anúncio encontrado.</p>
+    </section>
+
+    <section id="como-comprar" class="section alt">
+      <div class="section-head centered"><p class="eyebrow">PASSO A PASSO</p><h2>Como comprar</h2></div>
+      <div class="steps">
+        <article><span>01</span><h3>Escolha</h3><p>Confira o catálogo e abra o anúncio que interessa.</p></article>
+        <article><span>02</span><h3>Confira</h3><p>Leia todas as informações e os termos antes de prosseguir.</p></article>
+        <article><span>03</span><h3>Entre em contato</h3><p>Use o canal oficial de suporte para verificar a disponibilidade e as condições.</p></article>
+      </div>
+    </section>
+
+    <section id="termos" class="section">
+      <div class="section-head"><div><p class="eyebrow">TRANSPARÊNCIA</p><h2>Regras e termos</h2></div></div>
+      <div class="terms">
+        <p><b>1. Plataforma:</b> compras, vendas ou transferências de contas podem não ser permitidas pelas regras da Roblox. A Blox Zone não garante que uma conta permanecerá disponível se a plataforma tomar alguma medida.</p>
+        <p><b>2. Pagamento:</b> confirme o pedido e os dados do atendimento antes de pagar. Não envie dinheiro para pessoas fora dos canais oficiais.</p>
+        <p><b>3. Segurança:</b> nunca forneça senhas, códigos de verificação ou informações desnecessárias da sua conta pessoal.</p>
+        <p><b>4. Reembolsos:</b> solicitações serão analisadas conforme o caso e a legislação aplicável. Problemas causados pela plataforma não são automaticamente responsabilidade da loja.</p>
+        <p><b>5. Conduta:</b> golpes, comprovantes falsos, chargeback fraudulento, spam, ameaças e divulgação não autorizada não são permitidos.</p>
+      </div>
+    </section>
+
+    <section id="suporte" class="support">
+      <div><p class="eyebrow">PRECISA DE AJUDA?</p><h2>Fale com a equipe Blox Zone</h2><p>Substitua o botão abaixo pelo convite oficial do seu servidor.</p></div>
+      <a class="btn primary" href="https://discord.com/" target="_blank" rel="noopener">Entrar no Discord</a>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Blox Zone</span><span>Sua zona de Blox Fruits.</span></footer>
+
+  <aside id="cart" class="cart-panel" aria-hidden="true">
+    <div class="cart-head"><h2>Seu carrinho</h2><button id="closeCart">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+    <button class="btn primary full" id="checkout">Solicitar pelo suporte</button>
+  </aside>
+  <div id="overlay" class="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
