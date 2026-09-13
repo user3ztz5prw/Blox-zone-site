@@ -45,8 +45,6 @@ icon: "💜"
 
 let cart = JSON.parse(localStorage.getItem("bzCart") || "[]");
 
-// COLOQUE SEU NÚMERO DO WHATSAPP AQUI
-// Exemplo: 5511999999999
 const WHATSAPP_NUMBER = "559984378163";
 
 const money = (number) => {
@@ -185,13 +183,10 @@ cartTotal.textContent = money(total);
 
 checkout.disabled = cart.length === 0;
 
-if (cart.length === 0) {
-checkout.style.opacity = "0.5";
-checkout.style.cursor = "not-allowed";
-} else {
-checkout.style.opacity = "1";
-checkout.style.cursor = "pointer";
-}
+checkout.style.opacity = cart.length === 0 ? "0.5" : "1";
+checkout.style.cursor = cart.length === 0
+? "not-allowed"
+: "pointer";
 }
 
 function openCart() {
@@ -207,11 +202,6 @@ document.querySelector("#overlay").classList.remove("show");
 function checkoutWhatsApp() {
 if (cart.length === 0) {
 alert("Seu carrinho está vazio.");
-return;
-}
-
-if (WHATSAPP_NUMBER === "55SEUNUMEROAQUI") {
-alert("Configure o número do WhatsApp no arquivo script.js.");
 return;
 }
 
