@@ -98,7 +98,12 @@ const checkout = document.querySelector("#checkout");
 cartCount.textContent = cart.length;
 
 if (cart.length === 0) {
-cartItems.innerHTML = <p class="hero-text"> Seu carrinho está vazio. </p> ;
+cartItems.innerHTML = `
+  <p class="hero-text">
+    Seu carrinho está vazio.
+  </p>
+`;
+
 } else {
 cartItems.innerHTML = cart
 .map(
